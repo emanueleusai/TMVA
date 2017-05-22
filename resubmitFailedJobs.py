@@ -3,7 +3,7 @@
 import os, sys, fnmatch
 import math
 
-inDir = '/user_data/ssagir/CMSSW_7_4_7/src/TMVA/LJMet80X_1lep_051117_step2_BDT_21vars_condorLogs/nominal'
+inDir = '/user_data/ssagir/CMSSW_7_4_7/src/TMVA/LJMet80X_1lep_051117_step2_BDT_24vars_condorLogs/nominal'
 shifts = ['nominal','JERup','JERdown','JECup','JECdown']
 
 currentDir = os.getcwd()

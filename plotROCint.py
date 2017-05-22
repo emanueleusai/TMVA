@@ -11,12 +11,12 @@ from tdrStyle import *
 setTDRStyle()
 
 inputDirs = {
-             'Low':'weights/BDT_24varsScan_mDepth3_MLow/',
-             'Med':'weights/BDT_24varsScan_mDepth3_MMed/',
-             '800':'weights/BDT_24varsScan_mDepth3_M800/',
-             '1000':'weights/BDT_24varsScan_mDepth3_M1000/',
-             '2000':'weights/BDT_24varsScan_mDepth3_M2000/',
-             '3000':'weights/BDT_24varsScan_mDepth3_M3000/',
+             'Low':'weights/BDT_19varsScan_mDepth3_MLow/',
+             'Med':'weights/BDT_19varsScan_mDepth3_MMed/',
+             '800':'weights/BDT_19varsScan_mDepth3_M800/',
+             '1000':'weights/BDT_19varsScan_mDepth3_M1000/',
+             '2000':'weights/BDT_19varsScan_mDepth3_M2000/',
+             '3000':'weights/BDT_19varsScan_mDepth3_M3000/',
              }
 
 def findfiles(path, filtre):
@@ -45,7 +45,7 @@ for train in inputDirs.keys():
 	for ibin in ROCints.keys(): 
 		hists[train].SetBinContent(int(ibin), float(ROCints[ibin]))
 		hists[train].GetXaxis().SetBinLabel(int(ibin),ibin)
-		relhists[train].SetBinContent(int(ibin), float(ROCints[ibin])/float(ROCints['24']))
+		relhists[train].SetBinContent(int(ibin), float(ROCints[ibin])/float(ROCints['19']))
 		relhists[train].GetXaxis().SetBinLabel(int(ibin),ibin)
 
 canv = TCanvas("canv","ROCs", 1000, 800)
@@ -92,7 +92,7 @@ leg.SetLineColor(0)
 leg.SetNColumns(2)
 leg.Draw() 
 
-canv.SaveAs('ROCscan24vars.png')
+canv.SaveAs('ROCscan19vars.png')
 
 canvrel = TCanvas("canvrel","relROCs", 1000, 800)
 #canvrel.SetLogy()
@@ -139,5 +139,5 @@ legrel.SetLineColor(0)
 legrel.SetNColumns(2)
 legrel.Draw() 
 
-canvrel.SaveAs('relROCscan24vars.png')
+canvrel.SaveAs('relROCscan19vars.png')
 

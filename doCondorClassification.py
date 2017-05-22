@@ -3,13 +3,13 @@ import varsList
 
 nTrees = '1000'
 BDTlist = ['BDT']
-#varListKeys = ['Low'+str(i) for i in range(1,25)]
-#varListKeys = ['Med'+str(i) for i in range(1,25)]
-#varListKeys = ['0p8TeV'+str(i) for i in range(1,25)]
-#varListKeys = ['1TeV'+str(i) for i in range(1,25)]
-#varListKeys = ['2TeV'+str(i) for i in range(1,25)]
-#varListKeys = ['2TeV'+str(i) for i in range(1,25)]
-varListKeys = ['MAY24NoLepJetBJetMETHTvsST']
+#varListKeys = ['Low'+str(i) for i in range(1,20)]
+#varListKeys = ['Med'+str(i) for i in range(1,20)]
+#varListKeys = ['0p8TeV'+str(i) for i in range(1,20)]
+#varListKeys = ['1TeV'+str(i) for i in range(1,20)]
+#varListKeys = ['2TeV'+str(i) for i in range(1,20)]
+#varListKeys = ['3TeV'+str(i) for i in range(1,20)]
+varListKeys = ['MAY15']
 #massList = ['Low','Med','High','180','200','220','250','300','350','400','500','800','1000','2000','3000']
 massList = ['Low','Med','High','800','1000','2000','3000']
 

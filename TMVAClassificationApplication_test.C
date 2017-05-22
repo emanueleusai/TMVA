@@ -268,7 +268,7 @@ void TMVAClassificationApplication_new( TString myMethodList = "BDT" )
    theTree->SetBranchAddress( "PtFifthJet", &var32 );
    theTree->SetBranchAddress( "FW_momentum_2", &var33 );
    
-   TFile *target  = new TFile( "sinan.root","RECREATE" );
+   TFile *target  = new TFile( "test.root","RECREATE" );
    target->cd();
    TTree *newTree = theTree->CloneTree(0);
    Float_t BDTLow;

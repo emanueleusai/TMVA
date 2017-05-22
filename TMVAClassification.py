@@ -32,12 +32,10 @@
 
 # --------------------------------------------
 # Standard python import
-import sys    # exit
+import os,sys  # exit
 import time   # time accounting
 import getopt # command line parser
-import tool
 import ROOT as r
-import os
 import varsList
 
 # --------------------------------------------

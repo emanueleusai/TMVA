@@ -57,11 +57,13 @@ Application:
 
 	-- Scripts: 
 		1. TMVAClassificationApplication_template.C
-		2. TMVAClassificationApplication_test.C
-		3. doCondorApplication.py
-		4. doCondorApplication.sh
-		5. submitTMVAApplication.sh
-		6. resubmitFailedJobs.py
+		2. TMVAClassificationApplication_template2.C
+		3. TMVAClassificationApplication_test.C
+		4. doCondorApplication.py
+		5. doCondorApplication2.py
+		6. doCondorApplication.sh
+		7. submitTMVAApplication.sh
+		8. resubmitFailedJobs.py
 		
 	Edit doCondorApplication.py: main script to setup condor jobs to apply BDT weights. It uses TMVAClassificationApplication_template.C to setup the application macro depending on the training configuration such as the input variables used in the training are loaded from "varsList.py". For most needs, this is the only script that requires user modifications.
 	1. Input directory of the samples on which the BDT weights will be applied
@@ -70,10 +72,14 @@ Application:
 	
 	3. Specify the directory that the BDT weights applied samples should be saved.
 	
+	4. It has a version, doCondorApplication2.py, to submit jobs for a training with different set of variables depending on the signal mass 
+	
 	submitTMVAApplication.sh: submits application jobs for nominal samples together with JEC/JER shifts
 	
 	resubmitFailedJobs.py: performs some checks on the condor jobs to look for any obvious problems. It can also be used to resubmit the jobs that have problems by uncommenting the relevant block in the script; however, this part should be used if all the jobs are finished!!!
 	
 	TMVAClassificationApplication_template.C: This is the template script used for the BDT application. doCondorApplication.py uses this template and generates the final version for the specific BDT configuration as the details provided in doCondorApplication.py. For most needs, it doesn't need to be modified.
+
+	TMVAClassificationApplication_template2.C: This is the same as above, except that it allows having different set of variables for different mass trainings.
 	
 	TMVAClassificationApplication_test.C: Same as above, but this one is used mostly for tests and interactive application jobs. Heavy modification may be needed. Run it as "root -l -b -q TMVAClassificationApplication_test.C"
