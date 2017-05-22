@@ -31,7 +31,7 @@ Training:
 	
 	1. inputDir, directory containing the input root files
 	
-	2. List of variables to be used in the training can be defined in "varList" dictionary with a unique key, where each input directory has a list containing "[<variable in trees>, <variable name for axes and titles>, <unit>]"
+	2. List of variables to be used in the training can be defined in "varList" dictionary with a unique key, where each "varList[<key>]" has a list containing "[<variable in trees>, <variable name for axes and titles>, <unit>]"
 	
 	Edit doCondorClassification.py: condor job submitter for many different configurations
 	
